@@ -8,18 +8,16 @@
 </head>
 <body>
     <h1>Red Social PAJARITO</h1>
-    <h2>Ver posteos</h2>
-    <button onclick="getData()">Ver Posteos</button>
-    <ul id="postList"></ul>
-    
     <h2>Que estas pensando?</h2>
-    <form id="postForm" onsubmit="postData()">
+    <form id="postForm" onsubmit="event.preventDefault(), postData()">
         <label for="postTitle">Titulo:</label>
         <input type="text" id="postTitle">
 
         <label for="postBody">Comentarios</label>
         <textarea type="text" id="postBody" required></textarea>
         <button type="submit">Enviar</button>
+
+        <ul id="postList"></ul>
 
     </form>
 
